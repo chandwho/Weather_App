@@ -17,7 +17,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 50px 0;
+  padding: 30px 0;
 }
 
 #form-container {
@@ -68,25 +68,33 @@ button {
 #info-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   gap: 20px;
   background-color: rgb(0, 0, 0, 0.65);
   padding: 20px 0;
   margin-bottom: 40px;
-  height: 500px;
+  height: 70%;
   font-size: 1.2rem;
 }
 
-#description-container {
+#info-header{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+#header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
 
 #weather-info-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  height: 80%;
-  padding: 20px;
+  height: 60%;
 }
 
 .weather-info {
@@ -97,10 +105,34 @@ button {
   gap: 20px;
 }
 
+.weather-info h3{
+  color: rgb(193, 193, 193);
+}
+
 footer {
   font-size: 1.3rem;
+  position: fixed;
+  text-overflow: n;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%)
 }
 
 a {
   text-decoration: none;
 }
+
+@media (max-width: 768px) { 
+  #weather-info-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  #info-container{
+    height: 80%;
+    font-size: 1rem;
+  }
+  .weather-info{
+    gap: 5px;
+  }
+ }
